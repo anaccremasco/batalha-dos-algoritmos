@@ -63,5 +63,23 @@ console.log ("")
 console.log("PRÓLOGO:")
 console.log(`${nomePersonagem} uma ${classePersonagem} lendária, se prepara para enfrentar o grande Guardião dos códigos, afim de recuperar os códigos ancestrais que foram roubados a milhares de anos`);
 console.log(`Com sua ${NOME_ARMA}, ela treina por dias, até que o dia finalmente chegue, aumentando cada uma de suas habilidades.`);
-console.log(`Sua força: ${forca} | Sua defesa: ${defesa} | Sua agilidade: ${agilidade}`)
+console.log(`Sua força: ${forca} | Sua defesa: ${defesa} | Sua agilidade: ${agilidade}`);
 
+//CAPÍTULO 1: Condicionais Simples na narrativa
+console.log("")
+console.log("CAPÍTULO 1: O aviso dos ancestrais");
+
+//Verificação baseada no nível do personagem
+if (nivelAtual < 10) {
+    console.log(`Uma voz em sua mente avisa que você precisa treinar mais com a ${NOME_ARMA}, afim de que adquira novas habilidades`);
+}
+
+//Verificação de resursos especiais
+if (ouroAtual >= 50 ) {
+    console.log(`${nomePersonagem} vai até uma cabana isolada nas profundezas da floresta, onde um mago bem antigo vende poções mágicas`);
+}
+
+//Verificação de classe específica
+if (classe == "Maga") {
+    console.log("A mágia escorre através das profundezas de sua alma...");
+}
