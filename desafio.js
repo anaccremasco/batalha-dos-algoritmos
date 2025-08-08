@@ -70,16 +70,69 @@ console.log("")
 console.log("CAPÍTULO 1: O aviso dos ancestrais");
 
 //Verificação baseada no nível do personagem
-if (nivelAtual < 10) {
-    console.log(`Uma voz em sua mente avisa que você precisa treinar mais com a ${NOME_ARMA}, afim de que adquira novas habilidades`);
+if (nivelAtual > 10) {
+    console.log(`Uma voz em sua mente avisa que está na hora, ela finalmente está pronta`);
 }
 
 //Verificação de resursos especiais
-if (ouroAtual >= 50 ) {
-    console.log(`${nomePersonagem} vai até uma cabana isolada nas profundezas da floresta, onde um mago bem antigo vende poções mágicas`);
+if (ouroAtual >= 30 ) {
+    console.log(`${nomePersonagem} vai até uma cabana isolada nas profundezas da floresta, onde um ancião bem antigo vende poções mágicas`);
+    console.log(`${nomePersonagem} comprou uma poção para enfeitiçar sua ${NOME_ARMA} e agora está com ${ouroAtual - 30} moedas de ouro`)
+    ouroAtual = ouroAtual - 30
 }
 
 //Verificação de classe específica
-if (classe == "Maga") {
+if (classe == "maga") {
     console.log("A mágia escorre através das profundezas de sua alma...");
 }
+
+//CAPÍTULO 2: Escolha Estratégica
+console.log("");
+console.log("CAPÍTULO 2: Katana do Destino");
+
+//Escolhas baseadas em recursos
+if (ouroAtual >= 50) {
+    console.log(`Com tantas moedas sobrando, ${nomePersonagem} consegue comprar mais poções na caverna`);
+} else {
+    console.log("Você não tem ouro suficiente, mas conseguiu comprar a sua poção para sua katana com as moedas que você tinha antes");
+}
+
+//Sua experiencia e mágia
+if (xp >= 100) {
+    console.log(`${nomePersonagem} tem experiencia suficiente para conseguir encantar sua ${NOME_ARMA} sozinha`);
+} else {
+    console.log(`${nomePersonagem} precisa de ajuda do velho ancião para encantar sua katana `);
+}
+
+//CAPÍTULO 3: A Batalha Ancestral
+console.log("");
+console.log("CAPÍTULO 3: A Batalha Ancestral ");
+let poderInimigo = 70;
+
+//Combate
+if (vidaAtual <= 30) {
+    console.log(`Com sua vida quase chegando ao fim ${nomePersonagem} já não consegue respirar com antes, entino sua visão ficando turva e escura.`);
+    console.log(`Com sua última chance de sobreviver, usa toda sua força que lhe resta`);
+    poderInimigo -= (forca * 2);
+} else if (manaAtual >= 50 && classe === "maga") {
+    console.log(`${nomePersonagem} usa todo seu poder mágico junto com sua ${NOME_ARMA}`)
+    poderInimigo -= (forca + 20);
+    manaAtual -= 30
+} else {
+    console.log("Luta final")
+    poderInimigo -= (forca / 2);
+    vidaAtual += 10;
+}
+
+//EPÍLOGO
+if (poderInimigo <= 0) {
+    console.log("A batalha foi vencida")
+    experiencia += 100;
+    combateVencidos++;
+    console.log(`${nomePersonagem} é uma lenda em toda Algorithmia`)
+} else {
+    console.log("A batalha foi perdida" + nomePersonagem + "não conseguiu sobreviver a batalha")
+}
+
+console.log("")
+console.log("FIM DO CAPÍTULO")
