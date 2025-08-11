@@ -136,3 +136,38 @@ if (poderInimigo <= 0) {
 
 console.log("")
 console.log("FIM DO CAPÍTULO")
+
+//CONTINUAÇÃO NÍVEL 3
+
+let nomePersona = nome;
+let classePersona = classe;
+let nivelPersona = nivel + 2;
+let vidaAtualPersona = vidaAtual;
+let vidaMaximaPersona = vidaMaxima;
+let experienciaPersona = experiencia + 50;
+let ouroPersona = 200;
+
+//INVENTÁRIO
+let inventario = ["Poção da invisibilidade", "Katana de bugs", "Armadura criptografada"];
+let aliados = ["Bruxa Beatrix", "Arqueiro Apollo", "Guerreiro Cassian"];
+let inimigos = ["Vampiro Rhys", "Mago Harry", "Lobisomem Jacob"];
+let salasCastelo = ["Biblioteca lunar", "Jardim secreto", "Salão Invertido"];
+let tesouroColetado = ["Rubi da morte"];
+
+console.log("");
+console.log( nome + "entra no castelo abandonado da floresta dos sonhos, o castelo foi incendiado a duzentos anos atrás, quando os suditos do reino se rebelaram com os arrays do rei Damian III, e travaram uma guerra ");
+console.log("Inventário inicial:" ,  inventario.length  , "itens mágicos");
+
+
+//CAPÍTULO 1:
+console.log("");
+console.log("CAPÍTULO 1");
+
+//Inicialização
+let pocoesEncontradas = ["visão do passado", "Cura interior", "Velocidade da luz"];
+let armadilhasAtiradas = [];
+
+//Modificação
+console.log("Primeira poção:" + pocoesEncontradas[0]);
+console.log("Total de poções:" + pocoesEncontradas.length);
+
